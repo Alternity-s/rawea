@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAWEA – Lingkar Pertiwi | Beranda</title>
+  <meta name="description"
+    content="RAWEA oleh Lingkar Pertiwi – Produk pertanian segar & alami langsung dari petani lokal Kalimantan." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <!-- ── LOGO ── -->
+      <a href="index.html" class="logo-link">
+        <!-- [ICON: LOGO-MARK] SVG logo utama RAWEA. Ganti dengan <img src="assets/logo.svg"> atau logo Anda -->
+        <!-- <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logo RAWEA">
+        <circle cx="20" cy="20" r="19" fill="#1a5c2e"/>
+        <path d="M10 30 L10 12 Q10 8 14 8 L22 8 Q30 8 30 16 Q30 22 22 24 L10 30Z" fill="#4dba72"/>
+        <path d="M22 24 L30 30" stroke="#e8a020" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="14" cy="10" r="2" fill="#fff" opacity=".5"/>
+      </svg> -->
+
+        <img class="app-logo" src="./assets/rawea_logo.png" alt="Logo RAWEA">
+
+        <div>
+          <span class="logo-name">RAWEA</span>
+          <div class="logo-sub">Lingkar Pertiwi</div>
+        </div>
+      </a>
+
+      <!-- Desktop nav -->
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Beranda</a></li>
+        <li><a href="products.html">Produk</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+        <li><a href="contact.html" class="btn-green" style="padding:10px 22px; font-size:.85rem;">Hubungi Kami</a></li>
+      </ul>
+
+      <!-- Burger -->
+      <button id="burger" class="burger" aria-label="Buka menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <a href="index.html" class="active" onclick="closeMenu()">Beranda</a>
+      <a href="products.html" onclick="closeMenu()">Produk</a>
+      <a href="contact.html" onclick="closeMenu()">Kontak</a>
+      <a href="contact.html" class="btn-green self-start" style="padding:10px 22px; font-size:.85rem;"
+        onclick="closeMenu()">Hubungi Kami</a>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <section id="home" class="hero-bg section-hero">
+    <!-- Decorative blobs -->
+    <div class="leaf-blob" style="width:380px;height:380px;top:-80px;left:-80px;"></div>
+    <div class="leaf-blob" style="width:280px;height:280px;bottom:-60px;right:10%;"></div>
+    <div class="leaf-blob" style="width:180px;height:180px;top:30%;right:5%;"></div>
+
+    <div class="container hero-grid">
+      <!-- Text -->
+      <div>
+        <p class="section-label fade-up">Produk Alami Nusantara</p>
+        <h1 class="hero-heading fade-up delay-1">
+          Segar dari<br>
+          <span style="color:var(--green-mid);">Alam,</span> Hadir<br>
+          di Meja Anda
+        </h1>
+        <p class="hero-desc fade-up delay-2">
+          RAWEA oleh Lingkar Pertiwi menghadirkan produk pertanian segar &amp; olahan berkualitas tinggi langsung dari
+          petani lokal. Sehat, alami, dan terpercaya.
+        </p>
+        <div class="hero-cta fade-up delay-3">
+          <a href="products.html" class="btn-green">
+            Lihat Produk
+            <!-- [ICON: ARROW-RIGHT] Ganti dengan SVG ikon panah kanan dari library icon pilihan Anda -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="contact.html" class="btn-outline">Konsultasi Gratis</a>
+        </div>
+
+        <!-- Mini stats -->
+        <div class="hero-stats fade-up delay-3">
+          <div>
+            <div class="stat-number">200+</div>
+            <div class="stat-label">Petani Mitra</div>
+          </div>
+          <div>
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Jenis Produk</div>
+          </div>
+          <div>
+            <div class="stat-number">5★</div>
+            <div class="stat-label">Rating Pelanggan</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero visual -->
+      <div class="hero-visual">
+        <div class="hero-circle float">
+          <!-- [ICON: HERO-MAIN] Emoji/ilustrasi utama hero. Ganti dengan <img src="assets/hero-product.png" alt="Produk Segar RAWEA"> -->
+          <span style="font-size:130px;line-height:1;" aria-hidden="true">🥬</span>
+        </div>
+        <!-- Badge 1 -->
+        <div class="hero-badge hero-badge--top fade-up">
+          <!-- [ICON: BADGE-ORGANIK] Ganti dengan <img src="assets/icon-organic.svg"> -->
+          <span style="font-size:28px;" aria-hidden="true">🌿</span>
+          <div>
+            <div class="badge-title">100% Organik</div>
+            <div class="badge-sub">Tanpa Pestisida</div>
+          </div>
+        </div>
+        <!-- Badge 2 -->
+        <div class="hero-badge hero-badge--bottom fade-up delay-2">
+          <!-- [ICON: BADGE-DELIVERY] Ganti dengan <img src="assets/icon-delivery.svg"> -->
+          <span style="font-size:28px;" aria-hidden="true">🚚</span>
+          <div>
+            <div class="badge-title">Pengiriman Cepat</div>
+            <div class="badge-sub">Seluruh Indonesia</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════ MARQUEE ═══════════════════════ -->
+  <div class="marquee-bar">
+    <div class="marquee-track">
+      <!-- [ICON: MARQUEE-ITEMS] Ganti emoji di bawah dengan ikon SVG kecil jika diinginkan -->
+      <span>🌱 Sayuran Segar</span><span>•</span>
+      <span>🍎 Buah Pilihan</span><span>•</span>
+      <span>🌾 Beras Organik</span><span>•</span>
+      <span>🥜 Kacang Lokal</span><span>•</span>
+      <span>🍵 Teh Herbal</span><span>•</span>
+      <span>🧴 Minyak Kelapa</span><span>•</span>
+      <span>🌶️ Rempah Nusantara</span><span>•</span>
+      <!-- Duplikat untuk efek looping -->
+      <span>🌱 Sayuran Segar</span><span>•</span>
+      <span>🍎 Buah Pilihan</span><span>•</span>
+      <span>🌾 Beras Organik</span><span>•</span>
+      <span>🥜 Kacang Lokal</span><span>•</span>
+      <span>🍵 Teh Herbal</span><span>•</span>
+      <span>🧴 Minyak Kelapa</span><span>•</span>
+      <span>🌶️ Rempah Nusantara</span><span>•</span>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════ ABOUT ═══════════════════════ -->
+  <section id="about" class="section-pad">
+    <div class="container grid-2">
+      <div>
+        <p class="section-label">Tentang Kami</p>
+        <h2 class="section-heading">Lingkar Pertiwi,<br>Untuk Bumi &amp; Bangsa</h2>
+        <p class="mt-5 text-gray-600 leading-relaxed">
+          Lingkar Pertiwi adalah lembaga pemberdayaan petani lokal yang mendirikan brand <strong>RAWEA</strong> sebagai
+          jembatan antara petani dan konsumen. Kami percaya bahwa produk alami berkualitas harus bisa dinikmati semua
+          kalangan.
+        </p>
+        <p class="mt-4 text-gray-600 leading-relaxed">
+          Dari ladang di Kalimantan hingga meja makan Anda — setiap produk RAWEA melewati seleksi ketat dan dikemas
+          dengan standar higienis terbaik.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="products.html" class="btn-green">Jelajahi Produk</a>
+          <a href="contact.html" class="btn-outline">Kemitraan Petani</a>
+        </div>
+      </div>
+
+      <!-- Stat cards -->
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-card-num"><span>200</span>+</div>
+          <div class="stat-card-label">Petani Mitra Aktif</div>
+        </div>
+        <div class="stat-card" style="background:var(--amber);">
+          <div class="stat-card-num" style="color:#fff;">50+</div>
+          <div class="stat-card-label" style="color:rgba(255,255,255,.8);">Produk Tersedia</div>
+        </div>
+        <div class="stat-card" style="background:var(--green-lite);">
+          <div class="stat-card-num" style="color:#fff;">5★</div>
+          <div class="stat-card-label" style="color:rgba(255,255,255,.8);">Rating Pelanggan</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-num"><span>3</span> Thn</div>
+          <div class="stat-card-label">Pengalaman Distribusi</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════ FEATURED PRODUCTS (preview) ═══════════════════════ -->
+  <section class="section-pad" style="background:#eef7f1;">
+    <div class="container">
+      <div class="text-center mb-14">
+        <p class="section-label"
+          style="border-left:none;border-bottom:3px solid var(--amber);padding-left:0;padding-bottom:4px;">Produk
+          Unggulan</p>
+        <h2 class="section-heading mt-2">Pilihan Terbaik RAWEA</h2>
+        <p class="mt-4 text-gray-500 max-w-lg mx-auto">Setiap produk dipilih dengan cermat langsung dari kebun mitra
+          petani kami yang tersertifikasi.</p>
+      </div>
+
+      <div class="product-grid">
+        <!-- Card 1 -->
+        <div class="product-card">
+          <!-- [ICON: PRODUCT-SAYURAN] Ganti <div class="prod-img"> dengan <img src="assets/products/sayuran.jpg" alt="Sayuran Hijau"> -->
+          <div class="prod-img" style="background:#e8f5ec;">
+            <span aria-hidden="true">🥬</span>
+            <!-- [ICON: PROD-IMG-1] -->
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <span class="badge">Sayuran</span>
+              <span class="card-tag">Segar Harian</span>
+            </div>
+            <h3 class="card-title">Sayuran Hijau Organik</h3>
+            <p class="card-desc">Kangkung, bayam, sawi, dan pakcoy segar langsung dari kebun mitra kami di Kalimantan.
+            </p>
+            <div class="card-footer">
+              <span class="card-price">Rp 8.000<span class="card-unit">/ikat</span></span>
+              <a href="contact.html" class="btn-green btn-sm">Pesan</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="product-card">
+          <!-- [ICON: PRODUCT-BUAH] Ganti dengan <img src="assets/products/pisang.jpg" alt="Pisang Kepok"> -->
+          <div class="prod-img" style="background:#fff3e0;">
+            <span aria-hidden="true">🍌</span>
+            <!-- [ICON: PROD-IMG-2] -->
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <span class="badge" style="background:var(--amber);">Buah</span>
+              <span class="card-tag">Best Seller</span>
+            </div>
+            <h3 class="card-title">Pisang Kepok Lokal</h3>
+            <p class="card-desc">Pisang kepok manis dari kebun rakyat, cocok untuk konsumsi langsung maupun olahan.</p>
+            <div class="card-footer">
+              <span class="card-price">Rp 15.000<span class="card-unit">/sisir</span></span>
+              <a href="contact.html" class="btn-green btn-sm">Pesan</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="product-card">
+          <!-- [ICON: PRODUCT-VCO] Ganti dengan <img src="assets/products/vco.jpg" alt="Minyak VCO"> -->
+          <div class="prod-img" style="background:#fdf0f0;">
+            <span aria-hidden="true">🥥</span>
+            <!-- [ICON: PROD-IMG-3] -->
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <span class="badge" style="background:#c0392b;">Olahan</span>
+              <span class="card-tag">Premium</span>
+            </div>
+            <h3 class="card-title">Minyak Kelapa VCO</h3>
+            <p class="card-desc">Virgin Coconut Oil murni cold-press, tanpa bahan kimia, kaya manfaat kesehatan.</p>
+            <div class="card-footer">
+              <span class="card-price">Rp 65.000<span class="card-unit">/250ml</span></span>
+              <a href="contact.html" class="btn-green btn-sm">Pesan</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="products.html" class="btn-outline">Lihat Semua Produk →</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════ WHY RAWEA ═══════════════════════ -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="text-center mb-14">
+        <p class="section-label">Keunggulan Kami</p>
+        <h2 class="section-heading">Kenapa Pilih RAWEA?</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <!-- [ICON: WHY-ORGANIK] Ganti emoji dengan <img src="assets/icon-leaf.svg"> atau ikon dari Heroicons/Tabler -->
+          <div class="why-icon" aria-hidden="true">🌿</div>
+          <!-- [ICON: WHY-1] -->
+          <h3 class="why-title">100% Organik</h3>
+          <p class="why-desc">Bebas pestisida, pupuk kimia, dan bahan berbahaya.</p>
+        </div>
+        <div class="why-card">
+          <!-- [ICON: WHY-PETANI] Ganti dengan ikon handshake/petani -->
+          <div class="why-icon" aria-hidden="true">🤝</div>
+          <!-- [ICON: WHY-2] -->
+          <h3 class="why-title">Langsung dari Petani</h3>
+          <p class="why-desc">Tanpa perantara, harga lebih adil untuk petani &amp; konsumen.</p>
+        </div>
+        <div class="why-card">
+          <!-- [ICON: WHY-KEMASAN] Ganti dengan ikon box/packaging -->
+          <div class="why-icon" aria-hidden="true">📦</div>
+          <!-- [ICON: WHY-3] -->
+          <h3 class="why-title">Kemasan Higienis</h3>
+          <p class="why-desc">Dikemas standar food-grade, menjaga kesegaran lebih lama.</p>
+        </div>
+        <div class="why-card">
+          <!-- [ICON: WHY-PENGIRIMAN] Ganti dengan ikon rocket/delivery -->
+          <div class="why-icon" aria-hidden="true">🚀</div>
+          <!-- [ICON: WHY-4] -->
+          <h3 class="why-title">Pengiriman Cepat</h3>
+          <p class="why-desc">Ekspedisi terpercaya ke seluruh pelosok Indonesia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════ TESTIMONIALS ═══════════════════════ -->
+  <section class="section-pad" style="background:var(--green-dark);">
+    <div class="container">
+      <div class="text-center mb-12">
+        <p class="section-label" style="color:var(--amber);border-color:var(--amber);">Testimoni</p>
+        <h2 class="section-heading" style="color:#fff;">Kata Mereka Tentang RAWEA</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <!-- [ICON: STAR] Bintang rating. Bisa ganti dengan SVG bintang dari Heroicons -->
+          <div class="testi-stars" aria-label="5 bintang">★★★★★</div>
+          <!-- [ICON: STARS-1] -->
+          <p class="testi-text">"Sayuran RAWEA benar-benar segar, beda banget sama yang di pasar biasa. Sudah langganan
+            6 bulan dan selalu puas!"</p>
+          <div class="testi-author">
+            <!-- [ICON: AVATAR-1] Ganti dengan <img src="assets/avatar-sari.jpg" class="avatar" alt="Bu Sari"> -->
+            <div class="avatar" style="background:var(--green-mid);" aria-hidden="true">👩</div>
+            <!-- [ICON: AVATAR-1] -->
+            <div>
+              <div class="author-name">Bu Sari</div>
+              <div class="author-loc">Pelanggan, Banjarmasin</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars" aria-label="5 bintang">★★★★★</div>
+          <p class="testi-text">"Minyak VCO-nya juara! Beli buat keluarga dan hasilnya luar biasa. Harganya juga sangat
+            terjangkau untuk kualitas premium."</p>
+          <div class="testi-author">
+            <!-- [ICON: AVATAR-2] Ganti dengan <img src="assets/avatar-hendra.jpg" class="avatar" alt="Pak Hendra"> -->
+            <div class="avatar" style="background:var(--amber);" aria-hidden="true">👨</div>
+            <!-- [ICON: AVATAR-2] -->
+            <div>
+              <div class="author-name">Pak Hendra</div>
+              <div class="author-loc">Reseller, Balikpapan</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars" aria-label="5 bintang">★★★★★</div>
+          <p class="testi-text">"Sebagai resto sehat, kami percayakan semua kebutuhan sayur dan rempah ke RAWEA.
+            Konsisten dan pengiriman selalu tepat waktu."</p>
+          <div class="testi-author">
+            <!-- [ICON: AVATAR-3] Ganti dengan <img src="assets/avatar-lina.jpg" class="avatar" alt="Mbak Lina"> -->
+            <div class="avatar" style="background:var(--green-lite);" aria-hidden="true">👩</div>
+            <!-- [ICON: AVATAR-3] -->
+            <div>
+              <div class="author-name">Mbak Lina</div>
+              <div class="author-loc">Pemilik Resto, Palangkaraya</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <!-- [ICON: FOOTER-LOGO] Sama seperti navbar, ganti dengan logo final -->
+        <div class="logo-link" style="pointer-events:none;">
+          <!-- <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+            aria-label="Logo RAWEA">
+            <circle cx="20" cy="20" r="19" fill="#2d8a4e" />
+            <path d="M10 30 L10 12 Q10 8 14 8 L22 8 Q30 8 30 16 Q30 22 22 24 L10 30Z" fill="#4dba72" />
+            <path d="M22 24 L30 30" stroke="#e8a020" stroke-width="3" stroke-linecap="round" />
+          </svg> -->
+
+          <img class="app-logo-sub" src="./assets/rawea_logo.png" alt="Logo RAWEA">
+
+          <div>
+            <div class="logo-name">RAWEA</div>
+            <div class="logo-sub">by Lingkar Pertiwi</div>
+          </div>
+        </div>
+        <p class="footer-desc">Produk pertanian alami langsung dari mitra petani lokal. Sehat, segar, dan berkelanjutan
+          untuk generasi mendatang.</p>
+        <div class="social-links">
+          <!-- [ICON: SOCIAL-FB] Ganti dengan SVG ikon Facebook resmi -->
+          <a href="#" class="social-btn" aria-label="Facebook">
+            <svg class="social-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>Facebook</title>
+              <path
+                d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" />
+            </svg>
+          </a>
+          <!-- [ICON: SOCIAL-IG] Ganti dengan SVG ikon Instagram resmi -->
+          <a href="#" class="social-btn" aria-label="Instagram">
+            <svg class="social-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>Instagram</title>
+              <path
+                d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
+            </svg>
+          </a>
+          <!-- [ICON: SOCIAL-TW] Ganti dengan SVG ikon Twitter/X resmi -->
+          <a href="#" class="social-btn" aria-label="Twitter">
+            <svg class="social-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>X</title>
+              <path
+                d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Navigasi</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="products.html">Produk</a></li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Produk</div>
+        <ul class="footer-links">
+          <li><a href="products.html">Sayuran Segar</a></li>
+          <li><a href="products.html">Buah Lokal</a></li>
+          <li><a href="products.html">Olahan Premium</a></li>
+          <li><a href="products.html">Rempah Nusantara</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Kontak</div>
+        <ul class="footer-links">
+          <li>Jl. Lingkar Pertiwi No. 12</li>
+          <li>Banjarmasin, Kalsel</li>
+          <li><a href="tel:+6281234567890">+62 812-3456-7890</a></li>
+          <li><a href="mailto:rawea@lingkarpertiwi.id">rawea@lingkarpertiwi.id</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 RAWEA – Lingkar Pertiwi. All rights reserved.</span>
+      <!-- [ICON: FLAG-ID] Ganti emoji bendera dengan SVG jika perlu -->
+      <span>Banjarmasin, Kalimantan Selatan</span>
+      <!-- 🇮🇩 -->
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════ WA FAB ═══════════════════════ -->
+  <!-- [ICON: WHATSAPP-FAB] Tombol WhatsApp. SVG di bawah adalah logo WA resmi (bisa diganti) -->
+  <a href="https://wa.me/6281234567890?text=Halo%20RAWEA%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20produk%20Anda."
+    class="wa-fab" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+      <path
+        d="M12 .5C5.649.5.5 5.649.5 12c0 2.033.536 3.939 1.47 5.59L.5 23.5l6.1-1.455A11.45 11.45 0 0012 23.5C18.351 23.5 23.5 18.351 23.5 12S18.351.5 12 .5zm0 21a9.46 9.46 0 01-4.842-1.327l-.347-.206-3.621.864.88-3.517-.226-.361A9.46 9.46 0 012.5 12C2.5 6.761 6.761 2.5 12 2.5S21.5 6.761 21.5 12 17.239 21.5 12 21.5z" />
+    </svg>
+    WhatsApp
+  </a>
+
+  <script src="assets/main.js"></script>
+</body>
+
+</html>
