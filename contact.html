@@ -20,9 +20,7 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="index.html" class="logo-link">
-        <!-- [ICON: LOGO-MARK] Ganti dengan logo final Anda -->
         <img class="app-logo" src="./assets/rawea_logo.png" alt="Logo RAWEA">
-
         <div>
           <span class="logo-name">RAWEA</span>
           <div class="logo-sub">Lingkar Pertiwi</div>
@@ -60,144 +58,168 @@
   </section>
 
 
-  <!-- ═══════════════════════ CONTACT INFO + FORM ═══════════════════════ -->
+  <!-- ═══════════════════════ CHANNEL CARDS ═══════════════════════ -->
   <section class="section-pad">
-    <div class="container grid-2" style="align-items:start;">
-      <!-- ── Info Column ── -->
-      <div>
-        <p class="section-label">Informasi Kontak</p>
-        <h2 class="section-heading">Mari Berbicara<br>Bersama Kami</h2>
-        <p class="mt-4 text-gray-600 leading-relaxed">Punya pertanyaan tentang produk, harga grosir, atau kemitraan
-          petani? Tim RAWEA siap membantu Anda sepenuh hati.</p>
-
-        <div class="contact-info-list">
-          <!-- Alamat -->
-          <div class="contact-info-item">
-            <!-- [ICON: CONTACT-ALAMAT] Ganti emoji dengan SVG ikon map-pin dari Heroicons/Tabler/Lucide -->
-            <div class="contact-icon" aria-hidden="true">📍</div>
-            <!-- [ICON: CI-ALAMAT] -->
-            <div>
-              <div class="contact-info-label">Alamat</div>
-              <div class="contact-info-val">Jl. Lingkar Pertiwi No. 12, Banjarmasin,<br>Kalimantan Selatan 70000</div>
-            </div>
-          </div>
-          <!-- Telepon -->
-          <div class="contact-info-item">
-            <!-- [ICON: CONTACT-TELP] Ganti dengan SVG ikon phone -->
-            <div class="contact-icon" aria-hidden="true">📞</div>
-            <!-- [ICON: CI-TELP] -->
-            <div>
-              <div class="contact-info-label">Telepon / WhatsApp</div>
-              <div class="contact-info-val"><a href="tel:+6281234567890" style="color:var(--green-mid);">+62
-                  812-3456-7890</a></div>
-            </div>
-          </div>
-          <!-- Email -->
-          <div class="contact-info-item">
-            <!-- [ICON: CONTACT-EMAIL] Ganti dengan SVG ikon envelope/mail -->
-            <div class="contact-icon" aria-hidden="true">✉️</div>
-            <!-- [ICON: CI-EMAIL] -->
-            <div>
-              <div class="contact-info-label">Email</div>
-              <div class="contact-info-val"><a href="mailto:rawea@lingkarpertiwi.id"
-                  style="color:var(--green-mid);">rawea@lingkarpertiwi.id</a></div>
-            </div>
-          </div>
-          <!-- Jam -->
-          <div class="contact-info-item">
-            <!-- [ICON: CONTACT-JAM] Ganti dengan SVG ikon clock -->
-            <div class="contact-icon" aria-hidden="true">🕐</div>
-            <!-- [ICON: CI-JAM] -->
-            <div>
-              <div class="contact-info-label">Jam Operasional</div>
-              <div class="contact-info-val">Senin – Sabtu, 08.00 – 17.00 WITA</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Social media -->
-        <div class="mt-8">
-          <div class="contact-info-label mb-3">Ikuti Kami</div>
-          <div class="social-links" style="gap:12px;">
-            <!-- [ICON: SOCIAL-FB] --> <a href="#" class="social-btn-lg" aria-label="Facebook">📘 Facebook</a>
-            <!-- [ICON: SOCIAL-IG] --> <a href="#" class="social-btn-lg" aria-label="Instagram">📸 Instagram</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── Form Column ── -->
-      <div class="contact-form-card">
-        <h3 class="contact-form-title">Kirim Pesan</h3>
-
-        <!-- Success message -->
-        <div id="form-success" class="form-success hidden">
-          <!-- [ICON: FORM-SUCCESS] Ganti centang dengan SVG ikon check-circle -->
-          ✅ Pesan Anda telah terkirim! Tim kami akan segera menghubungi Anda.
-        </div>
-
-        <form id="contact-form" onsubmit="submitForm(event)" novalidate class="form-fields">
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="nama">Nama Lengkap <span style="color:#e53e3e;">*</span></label>
-              <input id="nama" type="text" class="contact-input" placeholder="Budi Santoso" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="wa">No. WhatsApp <span style="color:#e53e3e;">*</span></label>
-              <input id="wa" type="tel" class="contact-input" placeholder="0812-xxxx-xxxx" required />
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="email">Email</label>
-            <input id="email" type="email" class="contact-input" placeholder="email@anda.com" />
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="topik">Topik</label>
-            <select id="topik" class="contact-input">
-              <option value="">-- Pilih Topik --</option>
-              <option>Pemesanan Produk</option>
-              <option>Harga Grosir &amp; Wholesale</option>
-              <option>Kemitraan Petani</option>
-              <option>Pengiriman &amp; Ekspedisi</option>
-              <option>Pertanyaan Lainnya</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="pesan">Pesan <span style="color:#e53e3e;">*</span></label>
-            <textarea id="pesan" class="contact-input" rows="5" placeholder="Tuliskan kebutuhan atau pertanyaan Anda..."
-              required></textarea>
-          </div>
-          <button type="submit" class="btn-green btn-submit">
-            <!-- [ICON: SEND] Ganti emoji dengan SVG ikon send/paper-plane -->
-            <span>Kirim Pesan</span>
-            <span aria-hidden="true">📨</span>
-            <!-- [ICON: SEND-BTN] -->
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ═══════════════════════ MAP PLACEHOLDER ═══════════════════════ -->
-  <section class="section-pad" style="padding-top:0;">
     <div class="container">
-      <div class="map-container">
-        <!-- [ICON/EMBED: MAP] Ganti div ini dengan embed Google Maps Anda:
-           <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="400" style="border:0;" allowfullscreen loading="lazy"></iframe>
-      -->
-        <div class="map-placeholder">
-          <!-- [ICON: MAP-PIN-LARGE] Ganti dengan ikon peta yang lebih besar -->
-          <div style="font-size:64px;margin-bottom:16px;" aria-hidden="true">🗺️</div>
-          <!-- [ICON: MAP-LARGE] -->
-          <div class="map-placeholder-text">Google Maps Embed</div>
-          <div class="map-placeholder-sub">Ganti bagian ini dengan iframe Google Maps lokasi Anda</div>
-          <a href="https://maps.google.com/?q=Banjarmasin,Kalimantan+Selatan" target="_blank" rel="noopener"
-            class="btn-outline mt-4" style="margin-top:16px;">
-            <!-- [ICON: EXTERNAL-LINK] -->
-            Buka di Google Maps →
+      <div class="contact-intro">
+        <p class="section-label">Saluran Komunikasi</p>
+        <h2 class="section-heading">Hubungi Kami Melalui</h2>
+        <div class="section-divider"></div>
+        <p class="contact-intro-desc">
+          Kami berkomitmen merespons setiap pesan dalam waktu maksimal
+          <strong class="contact-intro-strong">1×24 jam</strong> di hari kerja.
+        </p>
+      </div>
+
+      <div class="channel-grid">
+
+        <!-- WhatsApp -->
+        <div class="channel-card">
+          <!-- [ICON: CHANNEL-WA] Ganti emoji dengan SVG logo WhatsApp -->
+          <div class="channel-icon-wrap channel-icon--wa" aria-hidden="true">💬</div>
+          <!-- [ICON: CH-WA] -->
+          <div>
+            <div class="channel-label">Respon Tercepat</div>
+            <div class="channel-title">WhatsApp</div>
+            <div class="channel-val channel-val--mt">
+              <a href="https://wa.me/6281234567890?text=Halo%20RAWEA%2C%20saya%20ingin%20bertanya." target="_blank"
+                rel="noopener">
+                +62 812-3456-7890
+              </a>
+            </div>
+            <div class="channel-val">Senin–Sabtu, 08.00–17.00 WITA</div>
+          </div>
+          <a href="https://wa.me/6281234567890?text=Halo%20RAWEA%2C%20saya%20ingin%20bertanya." target="_blank"
+            rel="noopener" class="channel-action">
+            Chat Sekarang →
           </a>
         </div>
+
+        <!-- Telepon -->
+        <div class="channel-card">
+          <!-- [ICON: CHANNEL-TELP] Ganti dengan SVG ikon phone dari Heroicons/Tabler -->
+          <div class="channel-icon-wrap channel-icon--telp" aria-hidden="true">📞</div>
+          <!-- [ICON: CH-TELP] -->
+          <div>
+            <div class="channel-label">Hubungi Langsung</div>
+            <div class="channel-title">Telepon</div>
+            <div class="channel-val channel-val--mt">
+              <a href="tel:+6281234567890">+62 812-3456-7890</a>
+            </div>
+            <div class="channel-val">Senin–Sabtu, 08.00–17.00 WITA</div>
+          </div>
+          <a href="tel:+6281234567890" class="channel-action">
+            Telepon Kami →
+          </a>
+        </div>
+
+        <!-- Email -->
+        <div class="channel-card">
+          <!-- [ICON: CHANNEL-EMAIL] Ganti dengan SVG ikon envelope/mail -->
+          <div class="channel-icon-wrap channel-icon--email" aria-hidden="true">✉️</div>
+          <!-- [ICON: CH-EMAIL] -->
+          <div>
+            <div class="channel-label">Untuk Keperluan Resmi</div>
+            <div class="channel-title">Email</div>
+            <div class="channel-val channel-val--mt">
+              <a href="mailto:rawea@lingkarpertiwi.id">rawea@lingkarpertiwi.id</a>
+            </div>
+            <div class="channel-val">Direspons dalam 1×24 jam kerja</div>
+          </div>
+          <a href="mailto:rawea@lingkarpertiwi.id" class="channel-action">
+            Kirim Email →
+          </a>
+        </div>
+
+        <!-- Alamat -->
+        <div class="channel-card">
+          <!-- [ICON: CHANNEL-ALAMAT] Ganti dengan SVG ikon map-pin -->
+          <div class="channel-icon-wrap channel-icon--alamat" aria-hidden="true">📍</div>
+          <!-- [ICON: CH-ALAMAT] -->
+          <div>
+            <div class="channel-label">Kunjungi Kami</div>
+            <div class="channel-title">Kantor &amp; Gudang</div>
+            <div class="channel-val channel-val--mt">Jl. Lingkar Pertiwi No. 12<br>Banjarmasin, Kalimantan Selatan 70000
+            </div>
+          </div>
+          <a href="https://maps.google.com/?q=Banjarmasin,Kalimantan+Selatan" target="_blank" rel="noopener"
+            class="channel-action">
+            Lihat Lokasi →
+          </a>
+        </div>
+
+        <!-- Instagram -->
+        <div class="channel-card">
+          <!-- [ICON: CHANNEL-IG] Ganti dengan SVG ikon Instagram resmi -->
+          <div class="channel-icon-wrap channel-icon--ig" aria-hidden="true">📸</div>
+          <!-- [ICON: CH-IG] -->
+          <div>
+            <div class="channel-label">Media Sosial</div>
+            <div class="channel-title">Instagram</div>
+            <div class="channel-val channel-val--mt">
+              <a href="https://instagram.com/rawea.id" target="_blank" rel="noopener">@rawea.id</a>
+            </div>
+            <div class="channel-val">Update produk &amp; promo terbaru</div>
+          </div>
+          <a href="https://instagram.com/rawea.id" target="_blank" rel="noopener" class="channel-action">
+            Ikuti Kami →
+          </a>
+        </div>
+
+        <!-- Facebook -->
+        <div class="channel-card">
+          <!-- [ICON: CHANNEL-FB] Ganti dengan SVG ikon Facebook resmi -->
+          <div class="channel-icon-wrap channel-icon--fb" aria-hidden="true">📘</div>
+          <!-- [ICON: CH-FB] -->
+          <div>
+            <div class="channel-label">Media Sosial</div>
+            <div class="channel-title">Facebook</div>
+            <div class="channel-val channel-val--mt">
+              <a href="https://facebook.com/rawea.lingkarpertiwi" target="_blank" rel="noopener">RAWEA Lingkar
+                Pertiwi</a>
+            </div>
+            <div class="channel-val">Komunitas pelanggan setia RAWEA</div>
+          </div>
+          <a href="https://facebook.com/rawea.lingkarpertiwi" target="_blank" rel="noopener" class="channel-action">
+            Kunjungi Halaman →
+          </a>
+        </div>
+
+      </div><!-- /channel-grid -->
+
+      <!-- Info strip -->
+      <div class="info-strip">
+        <div class="info-strip-item">
+          <!-- [ICON: STRIP-JAM] Ganti emoji dengan SVG ikon clock -->
+          <div class="info-strip-icon" aria-hidden="true">🕐</div>
+          <!-- [ICON: IS-JAM] -->
+          <div>
+            <div class="info-strip-label">Jam Operasional</div>
+            <div class="info-strip-val">Senin – Sabtu, 08.00 – 17.00 WITA</div>
+          </div>
+        </div>
+        <div class="info-strip-item">
+          <!-- [ICON: STRIP-RESPONS] Ganti dengan SVG ikon lightning/bolt -->
+          <div class="info-strip-icon" aria-hidden="true">⚡</div>
+          <!-- [ICON: IS-RESPONS] -->
+          <div>
+            <div class="info-strip-label">Waktu Respons</div>
+            <div class="info-strip-val">WhatsApp &lt; 2 jam · Email &lt; 24 jam</div>
+          </div>
+        </div>
+        <div class="info-strip-item">
+          <!-- [ICON: STRIP-WA] Ganti dengan SVG ikon WhatsApp -->
+          <div class="info-strip-icon" aria-hidden="true">💬</div>
+          <!-- [ICON: IS-WA] -->
+          <div>
+            <div class="info-strip-label">Saluran Utama</div>
+            <div class="info-strip-val">
+              <a href="https://wa.me/6281234567890">+62 812-3456-7890</a>
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -213,9 +235,7 @@
         <div class="faq-item" onclick="toggleFaq(this)">
           <div class="faq-q">
             Apakah RAWEA melayani pengiriman ke luar Kalimantan?
-            <!-- [ICON: FAQ-CHEVRON] Ganti dengan SVG chevron-down dari library icon -->
             <span class="faq-chevron" aria-hidden="true">▾</span>
-            <!-- [ICON: FAQ-TOGGLE] -->
           </div>
           <div class="faq-a">Ya! Kami mengirimkan ke seluruh Indonesia melalui ekspedisi terpercaya seperti JNE,
             J&amp;T, dan SiCepat. Untuk pemesanan dalam jumlah besar, tersedia juga layanan armada khusus.</div>
@@ -233,8 +253,8 @@
             Bagaimana cara menjadi mitra/reseller RAWEA?
             <span class="faq-chevron" aria-hidden="true">▾</span>
           </div>
-          <div class="faq-a">Isi formulir kontak di atas dengan topik "Kemitraan Petani" atau langsung hubungi kami via
-            WhatsApp. Tim kami akan menjelaskan syarat, keuntungan, dan prosedur menjadi mitra resmi RAWEA.</div>
+          <div class="faq-a">Langsung hubungi kami via WhatsApp dengan menyebutkan minat Anda untuk bermitra. Tim kami
+            akan menjelaskan syarat, keuntungan, dan prosedur menjadi mitra resmi RAWEA.</div>
         </div>
         <div class="faq-item" onclick="toggleFaq(this)">
           <div class="faq-q">
@@ -262,17 +282,8 @@
   <footer>
     <div class="container footer-grid">
       <div class="footer-brand">
-        <!-- [ICON: FOOTER-LOGO] Sama seperti navbar, ganti dengan logo final -->
         <div class="logo-link" style="pointer-events:none;">
-          <!-- <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
-            aria-label="Logo RAWEA">
-            <circle cx="20" cy="20" r="19" fill="#2d8a4e" />
-            <path d="M10 30 L10 12 Q10 8 14 8 L22 8 Q30 8 30 16 Q30 22 22 24 L10 30Z" fill="#4dba72" />
-            <path d="M22 24 L30 30" stroke="#e8a020" stroke-width="3" stroke-linecap="round" />
-          </svg> -->
-
           <img class="app-logo-sub" src="./assets/rawea_logo.png" alt="Logo RAWEA">
-
           <div>
             <div class="logo-name">RAWEA</div>
             <div class="logo-sub">by Lingkar Pertiwi</div>
@@ -281,7 +292,6 @@
         <p class="footer-desc">Produk pertanian alami langsung dari mitra petani lokal. Sehat, segar, dan berkelanjutan
           untuk generasi mendatang.</p>
         <div class="social-links">
-          <!-- [ICON: SOCIAL-FB] Ganti dengan SVG ikon Facebook resmi -->
           <a href="#" class="social-btn" aria-label="Facebook">
             <svg class="social-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <title>Facebook</title>
@@ -289,7 +299,6 @@
                 d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" />
             </svg>
           </a>
-          <!-- [ICON: SOCIAL-IG] Ganti dengan SVG ikon Instagram resmi -->
           <a href="#" class="social-btn" aria-label="Instagram">
             <svg class="social-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <title>Instagram</title>
@@ -297,7 +306,6 @@
                 d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
             </svg>
           </a>
-          <!-- [ICON: SOCIAL-TW] Ganti dengan SVG ikon Twitter/X resmi -->
           <a href="#" class="social-btn" aria-label="Twitter">
             <svg class="social-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <title>X</title>
@@ -336,13 +344,11 @@
     </div>
     <div class="footer-bottom">
       <span>© 2025 RAWEA – Lingkar Pertiwi. All rights reserved.</span>
-      <!-- [ICON: FLAG-ID] Ganti emoji bendera dengan SVG jika perlu -->
       <span>Banjarmasin, Kalimantan Selatan</span>
-      <!-- 🇮🇩 -->
     </div>
   </footer>
 
-  <!-- [ICON: WHATSAPP-FAB] -->
+  <!-- WhatsApp FAB -->
   <a href="https://wa.me/6281234567890?text=Halo%20RAWEA%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20produk%20Anda."
     class="wa-fab" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -353,6 +359,44 @@
     </svg>
     WhatsApp
   </a>
+
+  <!-- Tambahkan style untuk card kontak statis -->
+  <style>
+    .contact-info-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .contact-info-card:hover {
+      box-shadow: 0 8px 28px rgba(45, 138, 78, 0.12);
+      transform: translateY(-3px);
+    }
+
+    .contact-icon-lg {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .contact-info-card .contact-info-label {
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #6b7280;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-info-card .contact-info-val {
+      color: #1f2937;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+  </style>
 
   <script src="assets/main.js"></script>
 </body>
