@@ -64,28 +64,29 @@
 
   <!-- ═══════════════════════ HERO ═══════════════════════ -->
   <section id="home" class="hero-bg section-hero">
+
     <!-- Decorative blobs -->
-    <div class="leaf-blob" style="width:380px;height:380px;top:-80px;left:-80px;"></div>
-    <div class="leaf-blob" style="width:280px;height:280px;bottom:-60px;right:10%;"></div>
-    <div class="leaf-blob" style="width:180px;height:180px;top:30%;right:5%;"></div>
+    <div class="leaf-blob leaf-blob--lg"></div>
+    <div class="leaf-blob leaf-blob--md"></div>
+    <div class="leaf-blob leaf-blob--sm"></div>
 
     <div class="container hero-grid">
-      <!-- Text -->
+
+      <!-- ── Teks Kiri ── -->
       <div>
         <p class="section-label fade-up">Produk Alami Nusantara</p>
         <h1 class="hero-heading fade-up delay-1">
-          Segar dari<br>
-          <span style="color:var(--green-mid);">Alam,</span> Hadir<br>
-          di Meja Anda
+          Karya Tangan,<br>
+          <span class="hero-heading__accent">Alami</span> dari<br>
+          Kalimantan
         </h1>
         <p class="hero-desc fade-up delay-2">
-          RAWEA oleh Lingkar Pertiwi menghadirkan produk pertanian segar &amp; olahan berkualitas tinggi langsung dari
-          petani lokal. Sehat, alami, dan terpercaya.
+          RAWEA oleh Lingkar Pertiwi menghadirkan tas anyam eceng gondok —
+          dibuat tangan oleh pengrajin lokal, ramah lingkungan, dan kekinian.
         </p>
         <div class="hero-cta fade-up delay-3">
           <a href="products.html" class="btn-green">
             Lihat Produk
-            <!-- [ICON: ARROW-RIGHT] Ganti dengan SVG ikon panah kanan dari library icon pilihan Anda -->
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
               aria-hidden="true">
               <path d="M5 12h14M12 5l7 7-7 7" />
@@ -111,31 +112,56 @@
         </div>
       </div>
 
-      <!-- Hero visual -->
+      <!-- ── Hero Visual: Phone Mockup ── -->
       <div class="hero-visual">
-        <div class="hero-circle float">
-          <!-- [ICON: HERO-MAIN] Emoji/ilustrasi utama hero. Ganti dengan <img src="assets/hero-product.png" alt="Produk Segar RAWEA"> -->
-          <span style="font-size:130px;line-height:1;" aria-hidden="true">🥬</span>
-        </div>
-        <!-- Badge 1 -->
+
+        <!-- Glow & ring dekoratif -->
+        <div class="hero-glow"></div>
+        <div class="hero-ring hero-ring--1"></div>
+        <div class="hero-ring hero-ring--2"></div>
+
+        <!-- Badge: Handmade -->
         <div class="hero-badge hero-badge--top fade-up">
-          <!-- [ICON: BADGE-ORGANIK] Ganti dengan <img src="assets/icon-organic.svg"> -->
-          <span style="font-size:28px;" aria-hidden="true">🌿</span>
+          <div class="hero-badge__icon">✋</div>
           <div>
-            <div class="badge-title">100% Organik</div>
-            <div class="badge-sub">Tanpa Pestisida</div>
+            <div class="badge-title">Handmade</div>
+            <div class="badge-sub">Anyaman Lokal</div>
           </div>
         </div>
-        <!-- Badge 2 -->
+
+        <!-- Phone mockup -->
+        <div class="phone-mockup float">
+          <div class="phone-mockup__notch"></div>
+          <div class="phone-mockup__screen">
+            <span class="phone-mockup__store-label">RAWEA Store</span>
+            <!-- [ICON: HERO-MAIN] Ganti span di bawah dengan:
+               <img src="assets/hero-product.png" alt="Tas Eceng Gondok RAWEA" class="phone-mockup__img"> -->
+            <span class="phone-mockup__emoji" aria-hidden="true">👜</span>
+            <span class="phone-mockup__name">Tas Eceng<br>Gondok</span>
+            <span class="phone-mockup__tag">Handmade · Eco</span>
+            <span class="phone-mockup__price">Hubungi Kami</span>
+            <span class="phone-mockup__cta">Pesan Sekarang</span>
+          </div>
+        </div>
+
+        <!-- Badge: Ramah Lingkungan -->
         <div class="hero-badge hero-badge--bottom fade-up delay-2">
-          <!-- [ICON: BADGE-DELIVERY] Ganti dengan <img src="assets/icon-delivery.svg"> -->
-          <span style="font-size:28px;" aria-hidden="true">🚚</span>
+          <div class="hero-badge__icon hero-badge__icon--dark">🌿</div>
           <div>
-            <div class="badge-title">Pengiriman Cepat</div>
-            <div class="badge-sub">Seluruh Indonesia</div>
+            <div class="badge-title badge-title--light">Ramah Lingkungan</div>
+            <div class="badge-sub badge-sub--light">Eceng Gondok Asli</div>
           </div>
         </div>
-      </div>
+
+        <!-- Strip lokal -->
+        <div class="hero-strip">
+          <span class="hero-strip__dot"></span>
+          <span class="hero-strip__text">Produk Lokal Kalimantan</span>
+          <span class="hero-strip__dot"></span>
+        </div>
+
+      </div><!-- /hero-visual -->
+
     </div>
   </section>
 

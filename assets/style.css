@@ -3,7 +3,9 @@
    Stack: Tailwind CDN + custom CSS
    ═══════════════════════════════════════════════════ */
 
-/* ── CSS VARIABLES ───────────────────────────────── */
+/* ─────────────────────────────────────────────────
+   CSS VARIABLES
+───────────────────────────────────────────────── */
 :root {
   --green-dark: #1a5c2e;
   --green-mid: #2d8a4e;
@@ -13,7 +15,10 @@
   --bark: #2b1f0f;
 }
 
-/* ── BASE ────────────────────────────────────────── */
+
+/* ─────────────────────────────────────────────────
+   BASE
+───────────────────────────────────────────────── */
 *,
 *::before,
 *::after {
@@ -57,6 +62,7 @@ img.app-logo-sub {
   height: 48px;
 }
 
+
 /* ─────────────────────────────────────────────────
    LAYOUT
 ───────────────────────────────────────────────── */
@@ -87,6 +93,7 @@ img.app-logo-sub {
     padding: 64px 20px;
   }
 }
+
 
 /* ─────────────────────────────────────────────────
    TYPOGRAPHY HELPERS
@@ -124,6 +131,7 @@ img.app-logo-sub {
   border-radius: 2px;
   margin: 16px 0 0;
 }
+
 
 /* ─────────────────────────────────────────────────
    BUTTONS
@@ -189,6 +197,7 @@ img.app-logo-sub {
 .btn-wa:hover {
   background: #1da851;
 }
+
 
 /* ─────────────────────────────────────────────────
    NAVBAR
@@ -336,8 +345,9 @@ img.app-logo-sub {
   }
 }
 
+
 /* ─────────────────────────────────────────────────
-   HERO (index.html)
+   HERO
 ───────────────────────────────────────────────── */
 .hero-bg {
   background: linear-gradient(135deg, #e8f5ec 0%, #d4f0dc 40%, #c6e8cf 100%);
@@ -368,12 +378,22 @@ img.app-logo-sub {
   margin-top: 8px;
 }
 
+.hero-heading__accent {
+  color: var(--green-mid);
+}
+
 .hero-desc {
   margin-top: 20px;
   font-size: 1rem;
   line-height: 1.75;
   color: #4b5563;
   max-width: 440px;
+}
+
+@media (max-width: 900px) {
+  .hero-desc {
+    margin: 20px auto 0 auto;
+  }
 }
 
 .hero-cta {
@@ -404,23 +424,229 @@ img.app-logo-sub {
   margin-top: 2px;
 }
 
-/* Hero visual column */
+/* ── Hero visual column ── */
 .hero-visual {
   position: relative;
   display: flex;
-  justify-content: center;
-}
-
-.hero-circle {
-  width: 340px;
-  height: 340px;
-  border-radius: 50%;
-  background: var(--green-mid);
-  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 420px;
 }
 
+/* Decorative blob (shared across all pages) */
+.leaf-blob {
+  position: absolute;
+  border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+  background: var(--green-mid);
+  opacity: .08;
+  pointer-events: none;
+}
+
+/* Blob size/position helpers — replaces inline styles */
+.leaf-blob--lg {
+  width: 380px;
+  height: 380px;
+  top: -80px;
+  left: -80px;
+}
+
+.leaf-blob--md {
+  width: 280px;
+  height: 280px;
+  bottom: -60px;
+  right: 10%;
+}
+
+.leaf-blob--sm {
+  width: 180px;
+  height: 180px;
+  top: 30%;
+  right: 5%;
+}
+
+/* ── Glow circle behind phone ── */
+.hero-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(45, 138, 78, .18) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: heroGlowPulse 4s ease-in-out infinite;
+}
+
+@keyframes heroGlowPulse {
+
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: .7;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.08);
+    opacity: 1;
+  }
+}
+
+/* ── Decorative rings ── */
+.hero-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(45, 138, 78, .18);
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+}
+
+.hero-ring--1 {
+  width: 280px;
+  height: 280px;
+  transform: translate(-50%, -50%);
+  animation: heroRingSpin 22s linear infinite;
+}
+
+.hero-ring--2 {
+  width: 360px;
+  height: 360px;
+  transform: translate(-50%, -50%);
+  animation: heroRingSpin 32s linear infinite reverse;
+}
+
+@keyframes heroRingSpin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* ── Phone mockup ── */
+.phone-mockup {
+  width: 170px;
+  height: 292px;
+  background: #0e0e0e;
+  border-radius: 28px;
+  border: 3px solid rgba(255, 255, 255, .12);
+  box-shadow:
+    0 32px 80px rgba(26, 92, 46, .25),
+    0 8px 24px rgba(0, 0, 0, .3),
+    0 0 0 1px rgba(255, 255, 255, .06);
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+  /* reuses .float keyframe defined in ANIMATIONS */
+}
+
+.phone-mockup__notch {
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 7px;
+  background: #0e0e0e;
+  border-radius: 4px;
+  z-index: 5;
+}
+
+.phone-mockup__screen {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(160deg, #ecf8f0 0%, #d8f0e4 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.8rem .8rem 1.2rem;
+  gap: .35rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle weave pattern on screen */
+.phone-mockup__screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(45, 138, 78, .04) 0, rgba(45, 138, 78, .04) 2px, transparent 2px, transparent 14px),
+    repeating-linear-gradient(-45deg, rgba(45, 138, 78, .04) 0, rgba(45, 138, 78, .04) 2px, transparent 2px, transparent 14px);
+  pointer-events: none;
+}
+
+.phone-mockup__store-label {
+  font-size: .48rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--green-mid);
+  position: relative;
+  z-index: 1;
+}
+
+.phone-mockup__emoji {
+  font-size: 62px;
+  line-height: 1;
+  filter: drop-shadow(0 6px 14px rgba(26, 92, 46, .2));
+  position: relative;
+  z-index: 1;
+  margin: .2rem 0;
+}
+
+/* Drop-in replacement when a real photo is available */
+.phone-mockup__img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+  position: relative;
+  z-index: 1;
+  margin: .2rem 0;
+}
+
+.phone-mockup__name {
+  font-family: 'Playfair Display', serif;
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--bark);
+  text-align: center;
+  line-height: 1.25;
+  position: relative;
+  z-index: 1;
+}
+
+.phone-mockup__tag {
+  font-size: .52rem;
+  font-weight: 600;
+  color: var(--green-mid);
+  position: relative;
+  z-index: 1;
+}
+
+.phone-mockup__price {
+  font-size: .56rem;
+  color: #777;
+  position: relative;
+  z-index: 1;
+}
+
+.phone-mockup__cta {
+  background: var(--green-dark);
+  color: #fff;
+  font-size: .52rem;
+  font-weight: 700;
+  padding: .38rem .9rem;
+  border-radius: 50px;
+  margin-top: .3rem;
+  position: relative;
+  z-index: 1;
+  letter-spacing: .3px;
+}
+
+/* ── Hero badges ── */
 .hero-badge {
   position: absolute;
   background: #fff;
@@ -435,11 +661,56 @@ img.app-logo-sub {
 .hero-badge--top {
   top: 20px;
   right: 0;
+  animation: b1float 3.5s ease-in-out infinite;
 }
 
 .hero-badge--bottom {
   bottom: 40px;
   left: 0;
+  background: var(--green-dark);
+  animation: b2float 4s ease-in-out infinite .6s;
+}
+
+@keyframes b1float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes b2float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Icon wrapper inside badge */
+.hero-badge__icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: #eef7f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* Dark variant (Ramah Lingkungan badge) */
+.hero-badge__icon--dark {
+  background: rgba(255, 255, 255, .15);
 }
 
 .badge-title {
@@ -448,12 +719,49 @@ img.app-logo-sub {
   color: var(--green-dark);
 }
 
+.badge-title--light {
+  color: #fff;
+}
+
 .badge-sub {
   font-size: .72rem;
   color: #6b7280;
   margin-top: 2px;
 }
 
+.badge-sub--light {
+  color: rgba(255, 255, 255, .65);
+}
+
+/* ── Strip "Produk Lokal Kalimantan" ── */
+.hero-strip {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  background: rgba(26, 92, 46, .08);
+  border: 1px solid rgba(26, 92, 46, .15);
+  border-radius: 50px;
+  padding: .45rem 1.1rem;
+  margin-top: 1.5rem;
+  position: relative;
+  z-index: 3;
+}
+
+.hero-strip__dot {
+  width: 6px;
+  height: 6px;
+  background: var(--green-lite);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.hero-strip__text {
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--green-mid);
+}
+
+/* ── Hero responsive ── */
 @media (max-width: 900px) {
   .hero-grid {
     grid-template-columns: 1fr;
@@ -461,10 +769,7 @@ img.app-logo-sub {
     text-align: center;
   }
 
-  .hero-stats {
-    justify-content: center;
-  }
-
+  .hero-stats,
   .hero-cta {
     justify-content: center;
   }
@@ -474,25 +779,43 @@ img.app-logo-sub {
   }
 }
 
+@media (max-width: 640px) {
+  .hero-visual {
+    min-height: 340px;
+  }
+
+  .hero-ring--1 {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero-ring--2 {
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero-glow {
+    width: 240px;
+    height: 240px;
+  }
+}
+
 @media (max-width: 500px) {
-  .hero-circle {
-    width: 260px;
-    height: 260px;
+  .hero-badge--top {
+    right: -8px;
+    top: 30px;
+    transform: scale(.88);
+    transform-origin: top right;
   }
 
-  .hero-badge {
-    display: none;
+  .hero-badge--bottom {
+    left: -8px;
+    bottom: 50px;
+    transform: scale(.88);
+    transform-origin: bottom left;
   }
 }
 
-/* Decorative blob (shared across all pages) */
-.leaf-blob {
-  position: absolute;
-  border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
-  background: var(--green-mid);
-  opacity: .08;
-  pointer-events: none;
-}
 
 /* ─────────────────────────────────────────────────
    MARQUEE
@@ -527,6 +850,7 @@ img.app-logo-sub {
   }
 }
 
+
 /* ─────────────────────────────────────────────────
    ABOUT STAT CARDS (index.html)
 ───────────────────────────────────────────────── */
@@ -555,6 +879,7 @@ img.app-logo-sub {
   opacity: .75;
   margin-top: 4px;
 }
+
 
 /* ─────────────────────────────────────────────────
    PRODUCT CARDS (index.html + products.html)
@@ -673,6 +998,7 @@ img.app-logo-sub {
   color: #9ca3af;
 }
 
+
 /* ─────────────────────────────────────────────────
    FILTER BAR (products.html)
 ───────────────────────────────────────────────── */
@@ -703,6 +1029,7 @@ img.app-logo-sub {
   color: #fff;
   border-color: var(--green-mid);
 }
+
 
 /* ─────────────────────────────────────────────────
    WHY RAWEA (index.html)
@@ -755,6 +1082,7 @@ img.app-logo-sub {
   color: #6b7280;
   line-height: 1.55;
 }
+
 
 /* ─────────────────────────────────────────────────
    TESTIMONIALS (index.html)
@@ -833,6 +1161,7 @@ img.app-logo-sub {
   margin-top: 2px;
 }
 
+
 /* ─────────────────────────────────────────────────
    PAGE HERO (products.html + contact.html)
 ───────────────────────────────────────────────── */
@@ -878,6 +1207,7 @@ img.app-logo-sub {
   bottom: -40px;
   left: 10%;
 }
+
 
 /* ─────────────────────────────────────────────────
    CONTACT CHANNELS (contact.html)
@@ -1085,6 +1415,7 @@ img.app-logo-sub {
   color: var(--amber);
 }
 
+
 /* ─────────────────────────────────────────────────
    FAQ (contact.html)
 ───────────────────────────────────────────────── */
@@ -1170,6 +1501,7 @@ img.app-logo-sub {
   margin-bottom: 16px;
 }
 
+
 /* ─────────────────────────────────────────────────
    SOCIAL BUTTONS
 ───────────────────────────────────────────────── */
@@ -1201,6 +1533,7 @@ img.app-logo-sub {
 .social-icon:hover {
   fill: rgba(255, 255, 255, 1);
 }
+
 
 /* ─────────────────────────────────────────────────
    FOOTER
@@ -1298,6 +1631,7 @@ footer {
   gap: 8px;
 }
 
+
 /* ─────────────────────────────────────────────────
    WHATSAPP FAB
 ───────────────────────────────────────────────── */
@@ -1334,6 +1668,7 @@ footer {
     margin: 0;
   }
 }
+
 
 /* ─────────────────────────────────────────────────
    ANIMATIONS
@@ -1381,6 +1716,7 @@ footer {
 .delay-3 {
   animation-delay: .45s;
 }
+
 
 /* ─────────────────────────────────────────────────
    UTILITY
