@@ -16,7 +16,7 @@
 
 <body>
 
-  <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+  <!-- NAVBAR -->
   <nav id="navbar">
     <div class="nav-inner">
       <a href="index.html" class="logo-link">
@@ -28,9 +28,8 @@
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Beranda</a></li>
-        <!-- <li><a href="products.html">Produk</a></li> -->
         <li><a href="contact.html" class="active">Kontak</a></li>
-        <li><a href="contact.html" class="btn-green" style="padding:10px 22px;font-size:.85rem;">Hubungi Kami</a></li>
+        <li><a href="contact.html" class="btn-green btn-nav-sm">Hubungi Kami</a></li>
       </ul>
       <button id="burger" class="burger" aria-label="Buka menu">
         <span></span><span></span><span></span>
@@ -38,19 +37,17 @@
     </div>
     <div id="mobile-menu" class="mobile-menu">
       <a href="index.html" onclick="closeMenu()">Beranda</a>
-      <!-- <a href="products.html" onclick="closeMenu()">Produk</a> -->
       <a href="contact.html" class="active" onclick="closeMenu()">Kontak</a>
-      <a href="contact.html" class="btn-green self-start" style="padding:10px 22px;font-size:.85rem;"
-        onclick="closeMenu()">Hubungi Kami</a>
+      <a href="contact.html" class="btn-green btn-nav-sm self-start" onclick="closeMenu()">Hubungi Kami</a>
     </div>
   </nav>
 
 
-  <!-- ═══════════════════════ PAGE HERO ═══════════════════════ -->
+  <!-- PAGE HERO -->
   <section class="page-hero">
-    <div class="leaf-blob" style="width:300px;height:300px;top:-60px;right:-60px;"></div>
-    <div class="container" style="position:relative;z-index:1;">
-      <p class="section-label" style="color:var(--amber);border-color:var(--amber);">Kami Siap Membantu</p>
+    <div class="leaf-blob page-hero-blob"></div>
+    <div class="container page-hero-container">
+      <p class="section-label">Kami Siap Membantu</p>
       <h1 class="page-hero-title">Hubungi Tim<br>RAWEA</h1>
       <p class="page-hero-desc">Pemesanan, harga grosir, membangun kemitraan, atau sekadar bertanya? Kami siap merespons
         dengan senang hati.</p>
@@ -58,7 +55,7 @@
   </section>
 
 
-  <!-- ═══════════════════════ CHANNEL CARDS ═══════════════════════ -->
+  <!-- CHANNEL CARDS -->
   <section class="section-pad">
     <div class="container">
       <div class="contact-intro">
@@ -66,8 +63,7 @@
         <h2 class="section-heading">Hubungi Kami Melalui</h2>
         <div class="section-divider"></div>
         <p class="contact-intro-desc">
-          Kami berkomitmen merespons setiap pesan dalam waktu maksimal
-          <strong class="contact-intro-strong">1×24 jam</strong> di hari kerja.
+          Kami siap membantu. Kirimkan pesan Anda, dan kami akan segera merespons.
         </p>
       </div>
 
@@ -75,11 +71,9 @@
 
         <!-- Instagram -->
         <div class="channel-card">
-          <!-- [ICON: CHANNEL-IG] Ganti dengan SVG ikon Instagram resmi -->
           <div class="channel-icon-wrap channel-icon--ig" aria-hidden="true">
-            <img src="assets/instagram.svg" alt="instagram" style="width: 32px; height: 32px;">
+            <img src="assets/instagram.svg" alt="instagram" class="channel-icon-img">
           </div>
-          <!-- [ICON: CH-IG] -->
           <div>
             <div class="channel-label">Media Sosial</div>
             <div class="channel-title">Instagram</div>
@@ -93,13 +87,11 @@
           </a>
         </div>
 
-        <!-- WhatsApp -->
+        <!-- WhatsApp Agni -->
         <div class="channel-card">
-          <!-- [ICON: CHANNEL-WA] Ganti emoji dengan SVG logo WhatsApp -->
           <div class="channel-icon-wrap channel-icon--wa" aria-hidden="true">
-            <img src="assets/whatsapp.svg" alt="whatsapp" style="width: 32px; height: 32px;">
+            <img src="assets/whatsapp.svg" alt="whatsapp" class="channel-icon-img">
           </div>
-          <!-- [ICON: CH-WA] -->
           <div>
             <div class="channel-label">Respon Tercepat</div>
             <div class="channel-title">WhatsApp (Agni)</div>
@@ -109,7 +101,6 @@
                 +62 895-2230-6174
               </a>
             </div>
-            <!-- <div class="channel-val">Senin–Sabtu, 08.00–17.00 WITA</div> -->
           </div>
           <a href="https://wa.me/6289522306174?text=Halo%20RAWEA%2C%20saya%20ingin%20bertanya." target="_blank"
             rel="noopener" class="channel-action">
@@ -117,13 +108,11 @@
           </a>
         </div>
 
-        <!-- WhatsApp -->
+        <!-- WhatsApp Sonia -->
         <div class="channel-card">
-          <!-- [ICON: CHANNEL-WA] Ganti emoji dengan SVG logo WhatsApp -->
           <div class="channel-icon-wrap channel-icon--wa" aria-hidden="true">
-            <img src="assets/whatsapp.svg" alt="whatsapp" style="width: 32px; height: 32px;">
+            <img src="assets/whatsapp.svg" alt="whatsapp" class="channel-icon-img">
           </div>
-          <!-- [ICON: CH-WA] -->
           <div>
             <div class="channel-label">Respon Tercepat</div>
             <div class="channel-title">WhatsApp (Sonia)</div>
@@ -133,7 +122,6 @@
                 +62 821-7797-2074
               </a>
             </div>
-            <!-- <div class="channel-val">Senin–Sabtu, 08.00–17.00 WITA</div> -->
           </div>
           <a href="https://wa.me/6282177972074?text=Halo%20RAWEA%2C%20saya%20ingin%20bertanya." target="_blank"
             rel="noopener" class="channel-action">
@@ -141,101 +129,17 @@
           </a>
         </div>
 
-      </div><!-- /channel-grid -->
-
-      <!-- Info strip -->
-      <!-- <div class="info-strip">
-        <div class="info-strip-item">
-          <div class="info-strip-icon" aria-hidden="true">🕐</div>
-          <div>
-            <div class="info-strip-label">Jam Operasional</div>
-            <div class="info-strip-val">Senin – Sabtu, 08.00 – 17.00 WITA</div>
-          </div>
-        </div>
-        <div class="info-strip-item">
-          <div class="info-strip-icon" aria-hidden="true">⚡</div>
-          <div>
-            <div class="info-strip-label">Waktu Respons</div>
-            <div class="info-strip-val">WhatsApp &lt; 2 jam · Email &lt; 24 jam</div>
-          </div>
-        </div>
-        <div class="info-strip-item">
-          <div class="info-strip-icon" aria-hidden="true">💬</div>
-          <div>
-            <div class="info-strip-label">Saluran Utama</div>
-            <div class="info-strip-val">
-              <a href="https://wa.me/6281234567890">+62 812-3456-7890</a>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
+      </div>
     </div>
   </section>
 
 
-  <!-- ═══════════════════════ FAQ ═══════════════════════ -->
-  <!-- <section class="section-pad" style="background:#eef7f1;">
-    <div class="container" style="max-width:780px;">
-      <div class="text-center mb-12">
-        <p class="section-label">FAQ</p>
-        <h2 class="section-heading">Pertanyaan Umum</h2>
-      </div>
-      <div class="faq-list">
-        <div class="faq-item" onclick="toggleFaq(this)">
-          <div class="faq-q">
-            Apakah RAWEA melayani pengiriman ke luar Kalimantan?
-            <span class="faq-chevron" aria-hidden="true">▾</span>
-          </div>
-          <div class="faq-a">Ya! Kami mengirimkan ke seluruh Indonesia melalui ekspedisi terpercaya seperti JNE,
-            J&amp;T, dan SiCepat. Untuk pemesanan dalam jumlah besar, tersedia juga layanan armada khusus.</div>
-        </div>
-        <div class="faq-item" onclick="toggleFaq(this)">
-          <div class="faq-q">
-            Berapa minimal pemesanan untuk harga grosir?
-            <span class="faq-chevron" aria-hidden="true">▾</span>
-          </div>
-          <div class="faq-a">Harga grosir berlaku untuk pembelian minimal 10 kg per produk atau total transaksi di atas
-            Rp 500.000. Hubungi kami melalui WhatsApp untuk negosiasi harga dan penawaran khusus.</div>
-        </div>
-        <div class="faq-item" onclick="toggleFaq(this)">
-          <div class="faq-q">
-            Bagaimana cara menjadi mitra/reseller RAWEA?
-            <span class="faq-chevron" aria-hidden="true">▾</span>
-          </div>
-          <div class="faq-a">Langsung hubungi kami via WhatsApp dengan menyebutkan minat Anda untuk bermitra. Tim kami
-            akan menjelaskan syarat, keuntungan, dan prosedur menjadi mitra resmi RAWEA.</div>
-        </div>
-        <div class="faq-item" onclick="toggleFaq(this)">
-          <div class="faq-q">
-            Apakah produk RAWEA sudah bersertifikat organik?
-            <span class="faq-chevron" aria-hidden="true">▾</span>
-          </div>
-          <div class="faq-a">Sebagian produk kami sedang dalam proses sertifikasi organik resmi. Saat ini semua produk
-            dibudidayakan menggunakan metode organik (tanpa pestisida kimia & pupuk sintetis) dengan pengawasan langsung
-            tim Lingkar Pertiwi.</div>
-        </div>
-        <div class="faq-item" onclick="toggleFaq(this)">
-          <div class="faq-q">
-            Bagaimana keamanan kemasan untuk pengiriman jarak jauh?
-            <span class="faq-chevron" aria-hidden="true">▾</span>
-          </div>
-          <div class="faq-a">Kami menggunakan kemasan khusus food-grade dengan lapisan insulasi untuk produk segar.
-            Untuk sayuran dan buah, kami menggunakan cold-pack agar kesegaran terjaga selama pengiriman.</div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-
-  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <!-- FOOTER -->
   <footer>
     <div class="container footer-grid">
       <div class="footer-brand">
-        <div class="logo-link" style="pointer-events:none;">
-
+        <div class="logo-link logo-link--static">
           <img class="app-logo-sub" src="./assets/rawea_logo.png" alt="Logo RAWEA">
-
           <div>
             <div class="logo-name">RAWEA</div>
             <div class="logo-sub">by Lingkar Pertiwi</div>
@@ -273,7 +177,7 @@
   </footer>
 
 
-  <!-- ═══════════════════════ WA FAB ═══════════════════════ -->
+  <!-- WA FAB -->
   <a href="https://wa.me/6282177972074" class="wa-fab" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path
@@ -283,44 +187,6 @@
     </svg>
     WhatsApp
   </a>
-
-  <!-- Tambahkan style untuk card kontak statis -->
-  <style>
-    .contact-info-card {
-      background: #fff;
-      border: 1px solid #e5e7eb;
-      border-radius: 16px;
-      padding: 2rem 1.5rem;
-      text-align: center;
-      transition: box-shadow 0.2s ease, transform 0.2s ease;
-    }
-
-    .contact-info-card:hover {
-      box-shadow: 0 8px 28px rgba(45, 138, 78, 0.12);
-      transform: translateY(-3px);
-    }
-
-    .contact-icon-lg {
-      font-size: 2.5rem;
-      margin-bottom: 0.75rem;
-      display: block;
-    }
-
-    .contact-info-card .contact-info-label {
-      font-weight: 700;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #6b7280;
-      margin-bottom: 0.5rem;
-    }
-
-    .contact-info-card .contact-info-val {
-      color: #1f2937;
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-  </style>
 
   <script src="assets/main.js"></script>
 </body>

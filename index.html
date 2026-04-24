@@ -12,303 +12,51 @@
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="assets/style.css" />
-  <style>
-    .prod-detail-card {
-      background: #fff;
-      border-radius: 24px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      max-width: 860px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-      transition: box-shadow .3s;
-    }
-
-    @media (max-width: 640px) {
-      .prod-detail-card {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .prod-detail-img {
-      background: linear-gradient(145deg, #c8e6a8 0%, #96ca60 40%, #6aaf3d 100%);
-      min-height: 380px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .prod-detail-img::after {
-      content: '';
-      position: absolute;
-      bottom: -30px;
-      right: -30px;
-      width: 140px;
-      height: 140px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-    }
-
-    .prod-detail-img::before {
-      content: '';
-      position: absolute;
-      top: -20px;
-      left: -20px;
-      width: 100px;
-      height: 100px;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 50%;
-    }
-
-    .prod-detail-img .emoji-xl {
-      font-size: 110px;
-      filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.2));
-      position: relative;
-      z-index: 1;
-      animation: float 3.5s ease-in-out infinite;
-    }
-
-    @keyframes float {
-
-      0%,
-      100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-10px);
-      }
-    }
-
-    .eco-ribbon {
-      position: absolute;
-      top: 18px;
-      left: 0;
-      background: var(--green-dark);
-      color: #fff;
-      font-size: .72rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      padding: .4rem 1.2rem .4rem .9rem;
-      clip-path: polygon(0 0, 100% 0, 88% 50%, 100% 100%, 0 100%);
-    }
-
-    .prod-detail-info {
-      padding: 2.2rem 2rem 2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .prod-detail-top {
-      display: flex;
-      align-items: center;
-      gap: .5rem;
-      margin-bottom: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .tag-aksesori {
-      background: #eef7f1;
-      color: var(--green-mid);
-      font-size: .7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .6px;
-      padding: .3rem .8rem;
-      border-radius: 50px;
-    }
-
-    .tag-handmade {
-      background: #fff8e6;
-      color: var(--amber);
-      font-size: .7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .6px;
-      padding: .3rem .8rem;
-      border-radius: 50px;
-    }
-
-    .prod-detail-name {
-      font-family: var(--font-display);
-      font-size: clamp(1.4rem, 3vw, 1.75rem);
-      color: var(--bark);
-      line-height: 1.25;
-      margin-bottom: .75rem;
-    }
-
-    .prod-detail-desc {
-      font-size: .88rem;
-      color: #555;
-      line-height: 1.7;
-      margin-bottom: 1.4rem;
-    }
-
-    .prod-features {
-      display: flex;
-      flex-direction: column;
-      gap: .55rem;
-      margin-bottom: 1.6rem;
-    }
-
-    .feat-item {
-      display: flex;
-      align-items: flex-start;
-      gap: .6rem;
-      font-size: .83rem;
-      color: #444;
-      line-height: 1.4;
-    }
-
-    .feat-dot {
-      width: 20px;
-      height: 20px;
-      min-width: 20px;
-      background: #eef7f1;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: .7rem;
-      margin-top: 1px;
-    }
-
-    .prod-price-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-top: 1.2rem;
-      border-top: 1px solid #f0f0f0;
-      flex-wrap: wrap;
-      gap: .8rem;
-    }
-
-    .prod-price-label {
-      font-size: .75rem;
-      color: #999;
-      margin-bottom: .15rem;
-    }
-
-    .prod-price-main {
-      font-family: var(--font-display);
-      font-size: 1.6rem;
-      color: var(--green-dark);
-      font-weight: 700;
-      line-height: 1;
-    }
-
-    .prod-price-main span {
-      font-family: var(--font-body);
-      font-size: .8rem;
-      font-weight: 400;
-      color: #888;
-      margin-left: .25rem;
-    }
-
-    .prod-cta-btns {
-      display: flex;
-      gap: .6rem;
-      align-items: center;
-    }
-
-    .btn-wa {
-      background: #25d366;
-      color: #fff;
-      border: none;
-      font-family: var(--font-body);
-      font-size: .82rem;
-      font-weight: 700;
-      padding: .65rem 1.3rem;
-      border-radius: 50px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: .45rem;
-      text-decoration: none;
-      transition: background .2s, transform .2s;
-    }
-
-    .btn-wa:hover {
-      background: #1ebe5c;
-      transform: scale(1.03);
-    }
-
-    .btn-detail {
-      border: 1.5px solid var(--green-mid);
-      color: var(--green-mid);
-      background: transparent;
-      font-family: var(--font-body);
-      font-size: .82rem;
-      font-weight: 600;
-      padding: .65rem 1.1rem;
-      border-radius: 50px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all .2s;
-    }
-
-    .btn-detail:hover {
-      background: var(--green-mid);
-      color: #fff;
-    }
-  </style>
 </head>
 
 <body>
 
-  <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+  <!-- NAVBAR -->
   <nav id="navbar">
     <div class="nav-inner">
-      <!-- ── LOGO ── -->
       <a href="index.html" class="logo-link">
         <img class="app-logo" src="./assets/rawea_logo.png" alt="Logo RAWEA">
-
         <div>
           <span class="logo-name">RAWEA</span>
           <div class="logo-sub">Lingkar Pertiwi</div>
         </div>
       </a>
 
-      <!-- Desktop nav -->
       <ul class="nav-links">
         <li><a href="index.html" class="active">Beranda</a></li>
         <li><a href="contact.html">Kontak</a></li>
-        <li><a href="contact.html" class="btn-green" style="padding:10px 22px; font-size:.85rem;">Hubungi Kami</a></li>
+        <li><a href="contact.html" class="btn-green btn-nav-sm">Hubungi Kami</a></li>
       </ul>
 
-      <!-- Burger -->
       <button id="burger" class="burger" aria-label="Buka menu">
         <span></span><span></span><span></span>
       </button>
     </div>
 
-    <!-- Mobile menu -->
     <div id="mobile-menu" class="mobile-menu">
       <a href="index.html" class="active" onclick="closeMenu()">Beranda</a>
       <a href="contact.html" onclick="closeMenu()">Kontak</a>
-      <a href="contact.html" class="btn-green self-start" style="padding:10px 22px; font-size:.85rem;"
-        onclick="closeMenu()">Hubungi Kami</a>
+      <a href="contact.html" class="btn-green btn-nav-sm self-start" onclick="closeMenu()">Hubungi Kami</a>
     </div>
   </nav>
 
 
-  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <!-- HERO -->
   <section id="home" class="hero-bg section-hero">
 
-    <!-- Decorative blobs -->
     <div class="leaf-blob leaf-blob--lg"></div>
     <div class="leaf-blob leaf-blob--md"></div>
     <div class="leaf-blob leaf-blob--sm"></div>
 
     <div class="container hero-grid">
 
-      <!-- ── Teks Kiri ── -->
       <div>
+        <p class="section-label fade-up">Produk Kalimantan Selatan</p>
         <h1 class="hero-heading fade-up delay-1">
           Tatas Ilungnya, <br>
           Anyam Tasnya, <br>
@@ -328,39 +76,18 @@
           </a>
           <a href="contact.html" class="btn-outline">Konsultasi Gratis</a>
         </div>
-
-        <!-- Mini stats -->
-        <!-- <div class="hero-stats fade-up delay-3">
-          <div>
-            <div class="stat-number">200+</div>
-            <div class="stat-label">Petani Mitra</div>
-          </div>
-          <div>
-            <div class="stat-number">50+</div>
-            <div class="stat-label">Jenis Produk</div>
-          </div>
-          <div>
-            <div class="stat-number">5★</div>
-            <div class="stat-label">Rating Pelanggan</div>
-          </div>
-        </div> -->
       </div>
 
-      <!-- ── Hero Visual: Phone Mockup ── -->
       <div class="hero-visual">
 
-        <!-- Glow & ring dekoratif -->
         <div class="hero-glow"></div>
         <div class="hero-ring hero-ring--1"></div>
         <div class="hero-ring hero-ring--2"></div>
 
-        <!-- Phone mockup -->
         <div class="phone-mockup float-phone">
           <div class="phone-mockup__notch"></div>
           <div class="phone-mockup__screen">
             <span class="phone-mockup__store-label">RAWEA Store</span>
-            <!-- [ICON: HERO-MAIN] Ganti span di bawah dengan:
-               <img src="assets/hero-product.png" alt="Tas Eceng Gondok RAWEA" class="phone-mockup__img"> -->
             <span class="phone-mockup__emoji" aria-hidden="true">👜</span>
             <span class="phone-mockup__name">Tas Eceng<br>Gondok</span>
             <span class="phone-mockup__tag">Handmade · Eco</span>
@@ -369,27 +96,25 @@
           </div>
         </div>
 
-        <!-- Strip lokal -->
         <div class="hero-strip">
           <span class="hero-strip__dot"></span>
           <span class="hero-strip__text">Produk Lokal Kalimantan</span>
           <span class="hero-strip__dot"></span>
         </div>
 
-      </div><!-- /hero-visual -->
+      </div>
 
     </div>
   </section>
 
 
-  <!-- ═══════════════════════ MARQUEE ═══════════════════════ -->
+  <!-- MARQUEE -->
   <div class="marquee-bar">
     <div class="marquee-track">
       <span>Produk Lokal Banua</span><span>•</span>
       <span>Dukung UMKM Kalsel, Bangga Pakai Produk Sendiri!</span><span>•</span>
       <span>Kerajinan Tangan Asli Kalsel</span><span>•</span>
       <span>Harga Ramah, Kualitas Mewah</span><span>•</span>
-      <!-- Duplikat untuk efek looping -->
       <span>Produk Lokal Banua</span><span>•</span>
       <span>Dukung UMKM Kalsel, Bangga Pakai Produk Sendiri!</span><span>•</span>
       <span>Kerajinan Tangan Asli Kalsel</span><span>•</span>
@@ -398,7 +123,7 @@
   </div>
 
 
-  <!-- ═══════════════════════ ABOUT ═══════════════════════ -->
+  <!-- ABOUT -->
   <section id="about" class="section-pad">
     <div class="container grid-2">
       <div>
@@ -418,56 +143,30 @@
           <a href="contact.html" class="btn-outline">Kemitraan Petani</a>
         </div>
       </div>
-
-      <!-- Stat cards -->
-      <!-- <div class="stat-grid">
-        <div class="stat-card">
-          <div class="stat-card-num"><span>200</span>+</div>
-          <div class="stat-card-label">Petani Mitra Aktif</div>
-        </div>
-        <div class="stat-card" style="background:var(--amber);">
-          <div class="stat-card-num" style="color:#fff;">50+</div>
-          <div class="stat-card-label" style="color:rgba(255,255,255,.8);">Produk Tersedia</div>
-        </div>
-        <div class="stat-card" style="background:var(--green-lite);">
-          <div class="stat-card-num" style="color:#fff;">5★</div>
-          <div class="stat-card-label" style="color:rgba(255,255,255,.8);">Rating Pelanggan</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-card-num"><span>3</span> Thn</div>
-          <div class="stat-card-label">Pengalaman Distribusi</div>
-        </div>
-      </div> -->
     </div>
   </section>
 
 
-  <!-- ═══════════════════════ PRODUK UNGGULAN ═══════════════════════ -->
+  <!-- PRODUK UNGGULAN -->
   <section class="section-pad featured-product-section" id="produk">
     <div class="container">
 
-      <!-- Header -->
       <div class="text-center mb-14">
         <p class="section-label-center">Produk Unggulan</p>
-        <h2 class="section-heading fade-up" style="margin-top:.5rem;">Pilihan Terbaik RAWEA</h2>
-        <p class="fade-up delay-1"
-          style="margin-top:1rem; color:#6b7280; max-width:480px; margin-inline:auto; font-size:.9rem; line-height:1.7;">
+        <h2 class="section-heading featured-section-heading fade-up">Pilihan Terbaik RAWEA</h2>
+        <p class="featured-section-desc fade-up delay-1">
           Tas anyam eceng gondok — dibuat tangan oleh pengrajin lokal Kalimantan, ramah lingkungan, dan kekinian.
         </p>
       </div>
 
-      <!-- Featured Card -->
       <div class="featured-card fade-up delay-1">
 
-        <!-- Gambar -->
         <div class="featured-img">
           <div class="featured-img-badge">🌿 Ramah Lingkungan</div>
-          <!-- [ICON: PROD-IMG-FEATURED] Ganti dengan <img src="assets/products/tas-eceng.jpg" alt="Tas Eceng Gondok"> -->
           <span class="featured-img-emoji" aria-hidden="true">👜</span>
           <div class="featured-img-badge-bottom">✋ Handmade</div>
         </div>
 
-        <!-- Info -->
         <div class="featured-body">
 
           <div class="featured-card-top">
@@ -515,7 +214,7 @@
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </a>
-              <a href="products.html" class="btn-outline" style="font-size:.82rem; padding:10px 20px;">Detail →</a>
+              <a href="products.html" class="btn-outline btn-outline-sm">Detail →</a>
             </div>
           </div>
 
@@ -526,7 +225,7 @@
   </section>
 
 
-  <!-- ═══════════════════════ WHY RAWEA ═══════════════════════ -->
+  <!-- WHY RAWEA -->
   <section class="section-pad">
     <div class="container">
       <div class="text-center mb-14">
@@ -535,25 +234,19 @@
       </div>
       <div class="why-grid">
         <div class="why-card">
-          <!-- [ICON: WHY-ORGANIK] Ganti emoji dengan <img src="assets/icon-leaf.svg"> atau ikon dari Heroicons/Tabler -->
           <div class="why-icon" aria-hidden="true">🌿</div>
-          <!-- [ICON: WHY-1] -->
           <h3 class="why-title">100% Organik</h3>
           <p class="why-desc">Produk dibuat dari eceng gondok alami yang telah melalui proses pengeringan dengan baik.
           </p>
         </div>
         <div class="why-card">
-          <!-- [ICON: WHY-PETANI] Ganti dengan ikon handshake/petani -->
           <div class="why-icon" aria-hidden="true">🤝</div>
-          <!-- [ICON: WHY-2] -->
           <h3 class="why-title">Tahan Lama</h3>
           <p class="why-desc">Diproses dengan teknik pengolahan dan pengeringan yang tepat sehingga kuat, tidak mudah
             rapuh, dan awet digunakan dalam jangka waktu lama.</p>
         </div>
         <div class="why-card">
-          <!-- [ICON: WHY-KEMASAN] Ganti dengan ikon box/packaging -->
           <div class="why-icon" aria-hidden="true">📦</div>
-          <!-- [ICON: WHY-3] -->
           <h3 class="why-title">Untuk Semua Kalangan</h3>
           <p class="why-desc">Menggabungkan bahan alami dengan desain yang mengikuti tren, sehingga cocok digunakan oleh
             berbagai kalangan.</p>
@@ -563,24 +256,20 @@
   </section>
 
 
-  <!-- ═══════════════════════ TESTIMONIALS ═══════════════════════ -->
-  <section class="section-pad" style="background:var(--green-dark);">
+  <!-- TESTIMONIALS -->
+  <section class="section-pad section-testi">
     <div class="container">
       <div class="text-center mb-12">
-        <p class="section-label" style="color:var(--amber);border-color:var(--amber);">Testimoni</p>
-        <h2 class="section-heading" style="color:#fff;">Kata Mereka Tentang RAWEA</h2>
+        <p class="section-label section-label--testi">Testimoni</p>
+        <h2 class="section-heading section-heading--light">Kata Mereka Tentang RAWEA</h2>
       </div>
       <div class="testi-grid">
         <div class="testi-card">
-          <!-- [ICON: STAR] Bintang rating. Bisa ganti dengan SVG bintang dari Heroicons -->
           <div class="testi-stars" aria-label="5 bintang">★★★★★</div>
-          <!-- [ICON: STARS-1] -->
           <p class="testi-text">"Sayuran RAWEA benar-benar segar, beda banget sama yang di pasar biasa. Sudah langganan
             6 bulan dan selalu puas!"</p>
           <div class="testi-author">
-            <!-- [ICON: AVATAR-1] Ganti dengan <img src="assets/avatar-sari.jpg" class="avatar" alt="Bu Sari"> -->
-            <div class="avatar" style="background:var(--green-mid);" aria-hidden="true">👩</div>
-            <!-- [ICON: AVATAR-1] -->
+            <div class="avatar avatar--green" aria-hidden="true">👩</div>
             <div>
               <div class="author-name">Bu Sari</div>
               <div class="author-loc">Pelanggan, Banjarmasin</div>
@@ -592,9 +281,7 @@
           <p class="testi-text">"Minyak VCO-nya juara! Beli buat keluarga dan hasilnya luar biasa. Harganya juga sangat
             terjangkau untuk kualitas premium."</p>
           <div class="testi-author">
-            <!-- [ICON: AVATAR-2] Ganti dengan <img src="assets/avatar-hendra.jpg" class="avatar" alt="Pak Hendra"> -->
-            <div class="avatar" style="background:var(--amber);" aria-hidden="true">👨</div>
-            <!-- [ICON: AVATAR-2] -->
+            <div class="avatar avatar--amber" aria-hidden="true">👨</div>
             <div>
               <div class="author-name">Pak Hendra</div>
               <div class="author-loc">Reseller, Balikpapan</div>
@@ -606,9 +293,7 @@
           <p class="testi-text">"Sebagai resto sehat, kami percayakan semua kebutuhan sayur dan rempah ke RAWEA.
             Konsisten dan pengiriman selalu tepat waktu."</p>
           <div class="testi-author">
-            <!-- [ICON: AVATAR-3] Ganti dengan <img src="assets/avatar-lina.jpg" class="avatar" alt="Mbak Lina"> -->
-            <div class="avatar" style="background:var(--green-lite);" aria-hidden="true">👩</div>
-            <!-- [ICON: AVATAR-3] -->
+            <div class="avatar avatar--lite" aria-hidden="true">👩</div>
             <div>
               <div class="author-name">Mbak Lina</div>
               <div class="author-loc">Pemilik Resto, Palangkaraya</div>
@@ -620,14 +305,12 @@
   </section>
 
 
-  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <!-- FOOTER -->
   <footer>
     <div class="container footer-grid">
       <div class="footer-brand">
-        <div class="logo-link" style="pointer-events:none;">
-
+        <div class="logo-link logo-link--static">
           <img class="app-logo-sub" src="./assets/rawea_logo.png" alt="Logo RAWEA">
-
           <div>
             <div class="logo-name">RAWEA</div>
             <div class="logo-sub">by Lingkar Pertiwi</div>
@@ -652,8 +335,8 @@
       <div>
         <div class="footer-heading">Kontak</div>
         <ul class="footer-links">
-          <li><a href="https://wa.me/6289522306174">0895-2230-6174 (Agni)</a></li>
-          <li><a href="https://wa.me/6282177972074">0821-7797-2074 (Sonia)</a></li>
+          <li><a href="https://wa.me/6289522306174">+62 895-2230-6174 (Agni)</a></li>
+          <li><a href="https://wa.me/6282177972074">+62 821-7797-2074 (Sonia)</a></li>
           <li><a href="https://www.instagram.com/rawea.as">@rawea.as (Instagram)</a></li>
         </ul>
       </div>
@@ -665,7 +348,7 @@
   </footer>
 
 
-  <!-- ═══════════════════════ WA FAB ═══════════════════════ -->
+  <!-- WA FAB -->
   <a href="https://wa.me/6282177972074" class="wa-fab" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path
