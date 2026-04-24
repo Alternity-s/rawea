@@ -314,7 +314,7 @@ img.app-logo-sub {
   transition: max-height .35s ease, opacity .35s ease;
   background: #fff;
   border-radius: 16px;
-  padding: 0 24px;
+  padding: 24px;
   margin-top: 8px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, .1);
 }
@@ -322,7 +322,6 @@ img.app-logo-sub {
 .mobile-menu.open {
   max-height: 400px;
   opacity: 1;
-  padding: 24px;
 }
 
 .mobile-menu a {
@@ -345,6 +344,11 @@ img.app-logo-sub {
   }
 }
 
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none;
+  }
+}
 
 /* ─────────────────────────────────────────────────
    HERO
