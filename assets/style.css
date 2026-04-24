@@ -397,7 +397,7 @@ img.app-logo-sub {
 }
 
 .hero-cta {
-  margin-top: 36px;
+  margin-top: 48px;
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
@@ -525,8 +525,8 @@ img.app-logo-sub {
 
 /* ── Phone mockup ── */
 .phone-mockup {
-  width: 170px;
-  height: 292px;
+  width: 227px;
+  height: 389px;
   background: #0e0e0e;
   border-radius: 28px;
   border: 3px solid rgba(255, 255, 255, .12);
@@ -545,8 +545,8 @@ img.app-logo-sub {
   top: 9px;
   left: 50%;
   transform: translateX(-50%);
-  width: 48px;
-  height: 7px;
+  width: 64px;
+  height: 9px;
   background: #0e0e0e;
   border-radius: 4px;
   z-index: 5;
@@ -578,7 +578,7 @@ img.app-logo-sub {
 }
 
 .phone-mockup__store-label {
-  font-size: .48rem;
+  font-size: .64rem;
   font-weight: 800;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -588,7 +588,7 @@ img.app-logo-sub {
 }
 
 .phone-mockup__emoji {
-  font-size: 62px;
+  font-size: 82px;
   line-height: 1;
   filter: drop-shadow(0 6px 14px rgba(26, 92, 46, .2));
   position: relative;
@@ -609,7 +609,8 @@ img.app-logo-sub {
 
 .phone-mockup__name {
   font-family: 'Playfair Display', serif;
-  font-size: .72rem;
+  font-size: 1rem;
+  margin-top: 10px;
   font-weight: 700;
   color: var(--bark);
   text-align: center;
@@ -619,7 +620,7 @@ img.app-logo-sub {
 }
 
 .phone-mockup__tag {
-  font-size: .52rem;
+  font-size: .69rem;
   font-weight: 600;
   color: var(--green-mid);
   position: relative;
@@ -627,7 +628,7 @@ img.app-logo-sub {
 }
 
 .phone-mockup__price {
-  font-size: .56rem;
+  font-size: .75rem;
   color: #777;
   position: relative;
   z-index: 1;
@@ -636,7 +637,7 @@ img.app-logo-sub {
 .phone-mockup__cta {
   background: var(--green-dark);
   color: #fff;
-  font-size: .52rem;
+  font-size: .69rem;
   font-weight: 700;
   padding: .38rem .9rem;
   border-radius: 50px;
@@ -644,6 +645,43 @@ img.app-logo-sub {
   position: relative;
   z-index: 1;
   letter-spacing: .3px;
+}
+
+@media (max-width: 900px) {
+  .phone-mockup {
+    width: 170px;
+    height: 292px;
+  }
+
+  .phone-mockup__notch {
+    width: 48px;
+    height: 7px;
+  }
+
+  .phone-mockup__store-label {
+    font-size: .48rem;
+  }
+
+  .phone-mockup__emoji {
+    font-size: 62px;
+  }
+
+  .phone-mockup__name {
+    font-size: .72rem;
+    margin-top: 0;
+  }
+
+  .phone-mockup__tag {
+    font-size: .52rem;
+  }
+
+  .phone-mockup__price {
+    font-size: .56rem;
+  }
+
+  .phone-mockup__cta {
+    font-size: .52rem;
+  }
 }
 
 /* ── Hero badges ── */
@@ -656,6 +694,7 @@ img.app-logo-sub {
   display: flex;
   align-items: center;
   gap: 12px;
+  z-index: 4;
 }
 
 .hero-badge--top {
@@ -1036,7 +1075,7 @@ img.app-logo-sub {
 ───────────────────────────────────────────────── */
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -1689,6 +1728,28 @@ footer {
   animation: float 5s ease-in-out infinite;
 }
 
+@keyframes float-phone {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(7deg);
+  }
+
+  50% {
+    transform: translateY(-14px) rotate(7deg);
+  }
+}
+
+.float-phone {
+  animation: float-phone 5s ease-in-out infinite;
+}
+
+@media (max-width: 900px) {
+  .float-phone {
+    animation: float 5s ease-in-out infinite;
+  }
+}
+
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -1723,4 +1784,210 @@ footer {
 ───────────────────────────────────────────────── */
 .hidden {
   display: none !important;
+}
+
+/* ── Section: Produk Unggulan (Featured) ── */
+.featured-product-section {
+  background: #eef7f1;
+}
+
+.section-label-center {
+  display: inline-block;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--green-mid);
+  border-bottom: 3px solid var(--amber);
+  padding-bottom: 4px;
+}
+
+/* Card dua kolom horizontal */
+.featured-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(26, 92, 46, .08);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  transition: box-shadow .3s;
+}
+
+.featured-card:hover {
+  box-shadow: 0 16px 48px rgba(26, 92, 46, .14);
+}
+
+@media (max-width: 1280px) {
+  .featured-card {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 820px) {
+  .featured-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Sisi gambar */
+.featured-img {
+  background: #e8f5ec;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-img::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(45, 138, 78, .06) 0, rgba(45, 138, 78, .06) 1px, transparent 1px, transparent 12px),
+    repeating-linear-gradient(-45deg, rgba(45, 138, 78, .04) 0, rgba(45, 138, 78, .04) 1px, transparent 1px, transparent 12px);
+}
+
+.featured-img-emoji {
+  position: relative;
+  z-index: 1;
+  line-height: 1;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Badge di gambar */
+.featured-img-badge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: var(--green-dark);
+  color: #fff;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 50px;
+  z-index: 2;
+}
+
+.featured-img-badge-bottom {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  background: #fff;
+  color: var(--bark);
+  font-size: .72rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 50px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .1);
+  z-index: 2;
+}
+
+/* Sisi info */
+.featured-body {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+@media (max-width: 720px) {
+  .featured-body {
+    padding: 28px 24px;
+  }
+
+  .featured-img {
+    min-height: 260px;
+    font-size: 90px;
+  }
+}
+
+.featured-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 900;
+  color: var(--bark);
+  line-height: 1.2;
+}
+
+.featured-desc {
+  font-size: .9rem;
+  color: #4b5563;
+  line-height: 1.75;
+}
+
+/* Poin keunggulan */
+.featured-points {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.featured-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: .83rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.point-dot {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  background: #eef7f1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .75rem;
+  margin-top: 1px;
+}
+
+/* Footer card */
+.featured-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid #f0ede8;
+}
+
+.featured-price-note {
+  font-size: .72rem;
+  color: #aaa;
+  margin-bottom: 3px;
+}
+
+.featured-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--green-dark);
+}
+
+.featured-cta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
 }
