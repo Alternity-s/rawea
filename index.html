@@ -17,33 +17,35 @@
 <body>
 
   <!-- NAVBAR -->
-  <nav id="navbar">
-    <div class="nav-inner">
-      <a href="index.html" class="logo-link">
-        <img class="app-logo" src="./assets/rawea_logo.png" alt="Logo RAWEA">
-        <div>
-          <span class="logo-name">RAWEA</span>
-          <div class="logo-sub">Lingkar Pertiwi</div>
-        </div>
-      </a>
+  <div class="nav-container" id="navbar">
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="logo-link">
+          <img class="app-logo" src="./assets/rawea_logo.png" alt="Logo RAWEA">
+          <div>
+            <span class="logo-name">RAWEA</span>
+            <div class="logo-sub">Lingkar Pertiwi</div>
+          </div>
+        </a>
 
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Beranda</a></li>
-        <li><a href="contact.html">Kontak</a></li>
-        <li><a href="contact.html" class="btn-green btn-nav-sm">Hubungi Kami</a></li>
-      </ul>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Beranda</a></li>
+          <li><a href="contact.html">Kontak</a></li>
+          <li><a href="contact.html" class="btn-green btn-nav-sm">Hubungi Kami</a></li>
+        </ul>
 
-      <button id="burger" class="burger" aria-label="Buka menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+        <button id="burger" class="burger" aria-label="Buka menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
 
     <div id="mobile-menu" class="mobile-menu">
       <a href="index.html" class="active" onclick="closeMenu()">Beranda</a>
       <a href="contact.html" onclick="closeMenu()">Kontak</a>
       <a href="contact.html" class="btn-green btn-nav-sm self-start" onclick="closeMenu()">Hubungi Kami</a>
     </div>
-  </nav>
+  </div>
 
 
   <!-- HERO -->

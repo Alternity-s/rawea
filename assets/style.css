@@ -203,18 +203,30 @@ img.app-logo-sub {
 /* ─────────────────────────────────────────────────
    NAVBAR
 ───────────────────────────────────────────────── */
-#navbar {
+.nav-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
-  padding: 16px 24px;
-  transition: background .3s, box-shadow .3s;
+  display: flex;
+  flex-direction: column;
 }
 
-#navbar.scrolled {
-  background: rgba(247, 243, 236, .97);
+#navbar>.nav {
+  transition: background .3s, box-shadow .3s;
+  padding: 16px 24px;
+}
+
+#navbar.scrolled>.nav {
+  background: rgba(247, 243, 236, 1);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, .08);
+}
+
+#navbar.scrolled>.mobile-menu {
+  margin: 0;
+  border-radius: 0%;
+  background: rgba(247, 243, 236, 1);
   box-shadow: 0 2px 20px rgba(0, 0, 0, .08);
 }
 
@@ -312,17 +324,18 @@ img.app-logo-sub {
   overflow: hidden;
   max-height: 0;
   opacity: 0;
-  transition: max-height .35s ease, opacity .35s ease;
   background: #fff;
+  margin: 0 24px;
   border-radius: 16px;
-  padding: 24px;
-  margin-top: 8px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, .1);
+  transition: background .35s ease, max-height .35s ease, opacity .35s ease, border-radius .35s ease, box-shadow .35s ease, margin .35s ease, padding .35s ease .35s;
 }
 
 .mobile-menu.open {
   max-height: 400px;
+  padding: 24px;
   opacity: 1;
+  transition: max-height .35s ease, opacity .35s ease, border-radius .35s ease, box-shadow .35s ease, margin .35s ease;
 }
 
 .mobile-menu a {
@@ -376,7 +389,7 @@ img.app-logo-sub {
 }
 
 .hero-heading {
-  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 900;
   color: var(--green-dark);
   line-height: 1.1;
@@ -389,7 +402,7 @@ img.app-logo-sub {
 
 .hero-desc {
   margin-top: 20px;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 1vw, 1rem);
   line-height: 1.75;
   color: #4b5563;
   max-width: 440px;
@@ -437,6 +450,16 @@ img.app-logo-sub {
   align-items: center;
   justify-content: center;
   min-height: 420px;
+}
+
+@media (max-width: 560px) {
+  .hero-visual {
+    display: none;
+  }
+
+  .section-hero {
+    padding-top: 0;
+  }
 }
 
 /* Decorative blob (shared across all pages) */
