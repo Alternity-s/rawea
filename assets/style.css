@@ -1136,6 +1136,77 @@ img.app-logo-sub {
 
 
 /* ─────────────────────────────────────────────────
+   PRODUCT PAGE — card image backgrounds (products.html)
+───────────────────────────────────────────────── */
+.prod-img--1 {
+  background: #eaf5ed;
+}
+
+.prod-img--2 {
+  background: #fdf6e8;
+}
+
+.prod-img--3 {
+  background: #e8f5f0;
+}
+
+.prod-img--4 {
+  background: #f5ede8;
+}
+
+.prod-img--5 {
+  background: #eef2fa;
+}
+
+.prod-img--6 {
+  background: #f0f5e8;
+}
+
+.prod-img--7 {
+  background: #faeaea;
+}
+
+.prod-img--8 {
+  background: #f5eafa;
+}
+
+/* Small CTA button inside product card */
+.btn-green--sm {
+  font-size: var(--fs-xs);
+  padding: 8px 16px;
+}
+
+/* CTA banner section — centred container */
+.cta-container {
+  text-align: center;
+}
+
+/* CTA banner — muted white description text */
+.cta-desc {
+  color: rgba(255, 255, 255, .8);
+  max-width: 480px;
+  margin: 16px auto 32px;
+}
+
+/* CTA banner — centred hero-cta row */
+.hero-cta--center {
+  justify-content: center;
+}
+
+/* CTA banner — outline button on dark background */
+.btn-outline--light {
+  border-color: rgba(255, 255, 255, .4);
+  color: #fff;
+}
+
+.btn-outline--light:hover {
+  background: rgba(255, 255, 255, .15);
+  border-color: #fff;
+  color: #fff;
+}
+
+
+/* ─────────────────────────────────────────────────
    FILTER BAR (products.html)
 ───────────────────────────────────────────────── */
 .filter-bar {
@@ -1236,17 +1307,11 @@ img.app-logo-sub {
 ───────────────────────────────────────────────── */
 .testi-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
-@media (max-width: 900px) {
-  .testi-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .testi-grid {
     grid-template-columns: 1fr;
   }
@@ -1257,12 +1322,26 @@ img.app-logo-sub {
   border: 1px solid rgba(255, 255, 255, .18);
   border-radius: 20px;
   padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.testi-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.testi-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
 .testi-stars {
   color: #facc15;
   font-size: var(--fs-base);
-  margin-bottom: 12px;
   letter-spacing: 0.05em;
 }
 
@@ -1270,13 +1349,6 @@ img.app-logo-sub {
   color: rgba(255, 255, 255, .9);
   font-size: var(--fs-sm);
   line-height: var(--lh-relaxed);
-}
-
-.testi-author {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 16px;
 }
 
 .avatar {
@@ -1936,6 +2008,10 @@ footer {
   animation-delay: .45s;
 }
 
+.delay-4 {
+  animation-delay: .60s;
+}
+
 
 /* ─────────────────────────────────────────────────
    UTILITY
@@ -2213,6 +2289,10 @@ footer {
 
 .section-heading--light {
   color: #fff;
+}
+
+.avatar--teal {
+  background: #0d9488;
 }
 
 .avatar--green {
